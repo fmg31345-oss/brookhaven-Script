@@ -1,0 +1,20 @@
+if game.placeid == 4924922222 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("TITLE", "BloodTheme")
+
+--Main
+local Main = Window:NewTab("home")
+local MainSection - Main:NewSection("main")
+MainSection:NewDropdown("DropdownText", "DropdownInf", {"Option 1", "Option 2", "Option 3"}, function(currentOption)
+    print(currentOption)
+end)
+ -- Player
+local Player = Window:NewTab("Player")
+local PlayerSection = Tab:NewSection("Player")
+Section:NewSlider("SliderText", "Changes WalkSpeed", 100, 15, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("Jumppower", "Changes jumppower/jump boost", 500, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.Jumppower = s
+end)
+end
